@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idx Site</title>
-    <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/project-css.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="dot">•</li>
             <li class="selected"><a style="user-select: none;">Projects</a></li>
             <li class="dot">•</li>
@@ -19,35 +20,124 @@
         </ul>
     </nav>
 
-    <div class="content">
-        
+    <div class="content" style="display: flex; flex-direction: column; gap: 0; padding: 0; margin: 0;">
+        <h1 style="color: #FCFCFC; font-family: 'Inter', sans-serif; text-wrap: nowrap; padding: 5px; margin: 0;"><span class="emoji">✨</span> Something Amazing <span class="emoji">✨</span></h1>
+        <h1 style="color: #FCFCFC; font-family: 'Inter', sans-serif; text-wrap: nowrap; padding: 5px; margin: 0;">is <span style="color: #FFF;" class="underline">Coming Soon</span></h1>
+        <h2 style="color: #FCFCFC; font-family: 'Inter', sans-serif; text-wrap: nowrap; padding: 5px; margin: 0;">(Maybe)</h2>
     </div>
 
     <div class="footer">
         <hr>
         <div class="footer-content">
             <ul>
-                <li><a href="#" class="underline">Youtube</a></li>
+                <li><a href="https://www.youtube.com/@HazelNutzHoney" target="_blank" class="underline">Youtube</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Twitch</a></li>
+                <li><a href="https://www.twitch.tv/Hazel_Honey_" target="_blank" class="underline">Twitch</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Twitter (X)</a></li>
+                <li><a href="https://x.com/HazelNutzHoney" target="_blank" class="underline">Twitter (X)</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Discord</a></li>
+                <li><a href="https://discord.gg/FF4zXQcn5d" target="_blank" class="underline">Discord</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Github</a></li>
+                <li><a href="https://github.com/HazelNutHoney" target="_blank" class="underline">Github</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Gitlab</a></li>
+                <li><a href="https://gitlab.com/hazelnutzhoney" target="_blank" class="underline">Gitlab</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Medium</a></li>
+                <li><a href="https://medium.com/@hazelnutzhoney" target="_blank" class="underline">Medium</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Google Dev Profile</a></li>
+                <li><a href="https://g.dev/HazelNut" target="_blank" class="underline">Google Dev Profile</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Stack Overflow</a></li>
+                <li><a href="https://stackoverflow.com/users/19831895/hazel-nut" target="_blank" class="underline">Stack Overflow</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">PyPi</a></li>
+                <li><a href="https://pypi.org/user/Hazie/" target="_blank" class="underline">PyPi</a></li>
+            </ul>
+        </div>
+        <i class='bx bx-menu menu'></i>
+        <i class='bx bx-x menu-close'></i>
+
+        <div class="footer-menu">
+            <ul>
+                <li><a href="https://www.youtube.com/@HazelNutzHoney" target="_blank" class="underline">Youtube</a></li>
+                <li><a href="https://www.twitch.tv/Hazel_Honey_" target="_blank" class="underline">Twitch</a></li>
+                <li><a href="https://x.com/HazelNutzHoney" target="_blank" class="underline">Twitter (X)</a></li>
+                <li><a href="https://discord.gg/FF4zXQcn5d" target="_blank" class="underline">Discord</a></li>
+                <li><a href="https://github.com/HazelNutHoney" target="_blank" class="underline">Github</a></li>
+                <li><a href="https://gitlab.com/hazelnutzhoney" target="_blank" class="underline">Gitlab</a></li>
+                <li><a href="https://medium.com/@hazelnutzhoney" target="_blank" class="underline">Medium</a></li>
+                <li><a href="https://g.dev/HazelNut" target="_blank" class="underline">Google Dev Profile</a></li>
+                <li><a href="https://stackoverflow.com/users/19831895/hazel-nut" target="_blank" class="underline">Stack Overflow</a></li>
+                <li><a href="https://pypi.org/user/Hazie/" target="_blank" class="underline">PyPi</a></li>
             </ul>
         </div>
     </div>
+
+    <div class="scroll">
+        <i class='bx bx-chevron-down'></i>
+        <i class='bx bx-chevron-up'></i>
+    </div>
+
+    <script>
+        let content = document.querySelector(".content");
+        let scrollEle = document.querySelector('.scroll');
+        let footerMenu = document.querySelector('.footer-menu');
+        let menu = document.querySelector('.menu');
+        let menuClose = document.querySelector('.menu-close');
+
+        menu.onclick = () => {
+            footerMenu.style.display = "block";
+            document.body.style.overflow = "hidden";
+            menu.style.display = "none";
+            menuClose.style.display = "block";
+        }
+
+        menuClose.onclick = () => {
+            footerMenu.style.display = "none";
+            document.body.style.overflowY = "overlay";
+            menu.style.display = "block";
+            menuClose.style.display = "none";
+        }
+
+        function hasScrollbar(element) {
+            return element.scrollHeight > element.clientHeight;
+        }
+
+        function atBottom(element) {
+            var scrollHeight = element.scrollHeight;
+            var scrollTop = element.scrollTop;
+            var height = element.offsetHeight;
+            if (height == 0) {
+                return true;
+            }
+            return scrollTop == scrollHeight - height;
+        }
+
+        setInterval(() => {
+            if (hasScrollbar(document.querySelector(".content"))) {
+                scrollEle.style.display = "block";
+                if (atBottom(document.querySelector(".content"))) {
+                    scrollEle.querySelector('.bx-chevron-down').style.display = "none";
+                    scrollEle.querySelector('.bx-chevron-up').style.display = "block";
+                } else {
+                    scrollEle.querySelector('.bx-chevron-down').style.display = "block";
+                    scrollEle.querySelector('.bx-chevron-up').style.display = "none";
+                }
+            } else {
+                scrollEle.style.display = "none";
+            }
+        }, 10);
+
+        scrollEle.onclick = () => {
+            if (atBottom(document.querySelector(".content"))) {
+                content.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            } else {
+                content.scrollTo({
+                    top: content.scrollHeight,
+                    behavior: 'smooth'
+                })
+            }
+        }
+    </script>
 </body>
 </html>

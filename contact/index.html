@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idx Site</title>
-    <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body style="height: 100vh;">
+    <div class="fakenav"></div>
+
     <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li class="dot">•</li>
             <li><a href="../projects/">Projects</a></li>
             <li class="dot">•</li>
@@ -20,34 +23,80 @@
     </nav>
 
     <div class="content">
-        
+        <div class="img">
+            <img src="../images/hazie-icon.png" alt="Hazel's Profile Picture">
+        </div>
+        <h2><div>Where to find me?</div></h2>
+        <h3><div>You can find me on discord <span class="underline">hazelnuthoney</span> <br>or you can email me <span class="underline">hazelnutzhoney@gmail.com</span></div></h3>
     </div>
 
     <div class="footer">
         <hr>
         <div class="footer-content">
             <ul>
-                <li><a href="#" class="underline">Youtube</a></li>
+                <li><a href="https://www.youtube.com/@HazelNutzHoney" target="_blank" class="underline">Youtube</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Twitch</a></li>
+                <li><a href="https://www.twitch.tv/Hazel_Honey_" target="_blank" class="underline">Twitch</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Twitter (X)</a></li>
+                <li><a href="https://x.com/HazelNutzHoney" target="_blank" class="underline">Twitter (X)</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Discord</a></li>
+                <li><a href="https://discord.gg/FF4zXQcn5d" target="_blank" class="underline">Discord</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Github</a></li>
+                <li><a href="https://github.com/HazelNutHoney" target="_blank" class="underline">Github</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Gitlab</a></li>
+                <li><a href="https://gitlab.com/hazelnutzhoney" target="_blank" class="underline">Gitlab</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Medium</a></li>
+                <li><a href="https://medium.com/@hazelnutzhoney" target="_blank" class="underline">Medium</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Google Dev Profile</a></li>
+                <li><a href="https://g.dev/HazelNut" target="_blank" class="underline">Google Dev Profile</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">Stack Overflow</a></li>
+                <li><a href="https://stackoverflow.com/users/19831895/hazel-nut" target="_blank" class="underline">Stack Overflow</a></li>
                 <li class="dot">•</li>
-                <li><a href="#" class="underline">PyPi</a></li>
+                <li><a href="https://pypi.org/user/Hazie/" target="_blank" class="underline">PyPi</a></li>
             </ul>
         </div>
     </div>
+
+    <i class='bx bx-menu menu'></i>
+    <i class='bx bx-x menu-close'></i>
+
+    <div class="footer-menu">
+        <ul>
+            <li><a href="https://www.youtube.com/@HazelNutzHoney" target="_blank" class="underline">Youtube</a></li>
+            <li><a href="https://www.twitch.tv/Hazel_Honey_" target="_blank" class="underline">Twitch</a></li>
+            <li><a href="https://x.com/HazelNutzHoney" target="_blank" class="underline">Twitter (X)</a></li>
+            <li><a href="https://discord.gg/FF4zXQcn5d" target="_blank" class="underline">Discord</a></li>
+            <li><a href="https://github.com/HazelNutHoney" target="_blank" class="underline">Github</a></li>
+            <li><a href="https://gitlab.com/hazelnutzhoney" target="_blank" class="underline">Gitlab</a></li>
+            <li><a href="https://medium.com/@hazelnutzhoney" target="_blank" class="underline">Medium</a></li>
+            <li><a href="https://g.dev/HazelNut" target="_blank" class="underline">Google Dev Profile</a></li>
+            <li><a href="https://stackoverflow.com/users/19831895/hazel-nut" target="_blank" class="underline">Stack Overflow</a></li>
+            <li><a href="https://pypi.org/user/Hazie/" target="_blank" class="underline">PyPi</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        let fakenav = document.querySelector('.fakenav');
+        let nav = document.querySelector('nav');
+        let footerMenu = document.querySelector('.footer-menu');
+        let menu = document.querySelector('.menu');
+        let menuClose = document.querySelector('.menu-close');
+
+        menu.onclick = () => {
+            footerMenu.style.display = "block";
+            document.body.style.overflow = "hidden";
+            menu.style.display = "none";
+            menuClose.style.display = "block";
+        }
+
+        menuClose.onclick = () => {
+            footerMenu.style.display = "none";
+            document.body.style.overflowY = "overlay";
+            menu.style.display = "block";
+            menuClose.style.display = "none";
+        }
+
+        fakenav.style.height = parseFloat(nav.offsetHeight) + parseFloat(nav.offsetTop) * 2.5 + "px";
+    </script>
 </body>
 </html>

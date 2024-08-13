@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Color+Emoji&display=swap&display=swap');
+
+:root {
+    --gradient-start: #7A59FF;
+    --gradient-end: #923DFF;
+    --selected: #FCFCFC;
+    --divider: #FFFFFF;
+    --neutral: #CFCFCF;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+    height: 12px; /* Set the height of the scrollbar (for horizontal scrolling) */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scroll thumb */
+    border-radius: 10px; /* Rounded corners for the scroll thumb */
+    border: 3px solid transparent; /* Give it some padding */
+    background-clip: content-box; /* Clip the background to show only the content */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+/* TEST CODE */
+
+/* * {
+    outline: 1px solid red;
+} */
+
+/* END TEST CODE */
+
+body {
+    background: linear-gradient(var(--gradient-start), var(--gradient-end));
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.fakenav {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 999;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    list-style: none;
+    padding: 0;
+}
+
+ul * {
+    color: var(--neutral);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.selected a {
+    color: var(--selected) !important;
+    font-weight: 900 !important;
+}
+
+.dot {
+    color: var(--divider);
+    font-size: 15px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boundaries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boundaries .tag {
+    color: #DBADFF;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 100px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boundaries ul {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 30px 50px 30px 50px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    list-style: outside;
+    border-radius: 20px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.center {
+    align-self: center;
+    list-style: none;
+}
+
+img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 14rem;
+    border-radius: 111px;
+}
+
+.img {
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+}
+
+.img::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: #737373;
+    z-index: 99;
+    border-radius: 100px;
+    border: 2px solid var(--neutral);
+    box-sizing: border-box;
+}
+
+.img::after {
+    font-family: 'Noto Color Emoji', sans-serif;
+    content: "☕";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), #F5F5F5);
+    z-index: 999;
+    border-radius: 100px;
+    border: 2px solid var(--neutral);
+    box-sizing: border-box;
+    line-height: 36px;
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    gap: 10px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--neutral);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 950px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 90px;
+}
+
+hr {
+    border-bottom: none;
+    border-color: #923DFF;
+}
+
+.footer-content {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.menu, .menu-close {
+    font-size: 45px;
+    color: var(--divider);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 999999999;
+}
+
+.footer-menu {
+    transition: 0.25s all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(var(--gradient-start), var(--gradient-end));
+    z-index: 999999;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+
+.footer-menu::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.footer-menu ul li {
+    background: rgb(59, 0, 185, 0.35);
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    padding: 6px;
+    aspect-ratio: 378 / 58;
+    width: 75%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.footer-menu a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1460px) {
+    .footer {
+        display: none;
+    }
+
+    .bx-menu {
+        display: block;
+    }
+
+    .content .img, .content img {
+        width: 10rem;
+        height: fit-content;
+    }
+
+    .content h2, .content h3 {
+        font-size: 18px;
+    }
+
+    .bx-menu {
+        display: block;
+    }
+}
