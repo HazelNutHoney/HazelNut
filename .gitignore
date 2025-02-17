@@ -1,6 +1,6 @@
 # Perm
-/.idx
-/.vscode
+**/.idx/
+**/.vscode/
 /docs
 
 # Temp
