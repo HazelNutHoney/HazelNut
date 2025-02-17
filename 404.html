@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazel Nut Honey - 404</title>
+    <title>404 Page not found!!1111!!</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon/icon.png" /> <!-- Credit to chippowfrog on Picrew for the generator for the favicon -->
+
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/404.css">
 </head>
-<body style="height: 100vh;">
-    <div class="fakenav"></div>
+<body>
+    <div class="container">
+        <span class="error-container">
+            <h1 class="error">
+                404
+            </h1>
+            
+            <span class="separator">|</span>
+            
+            <h4 class="message">
+                Page not found
+            </h4>
+        </span>
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li class="dot">•</li>
-            <li><a href="/projects/">Projects</a></li>
-            <li class="dot">•</li>
-            <li><a href="/contact/">Contact</a></li>
-            <li class="dot">•</li>
-            <li><a href="https://discord.gg/FF4zXQcn5d" target="_blank">Discord</a></li>
-        </ul>
-    </nav>
-
-    <div class="content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-        <h2>This isn't the page your looking for</h2>
-        <h3 style="width: 100%; justify-content: center;">Thats a 404 :&#40;</h3>
+        <span class="description">
+            The requested page was not found. Check the URL to see if its the correct one or if it got moved.
+        </span>
     </div>
-
-    <script>
-        let fakenav = document.querySelector('.fakenav');
-        let nav = document.querySelector('nav');
-
-        fakenav.style.height = parseFloat(nav.offsetHeight) + parseFloat(nav.offsetTop) + "px";
-    </script>
 </body>
-</html>
+</html>  

@@ -1,0 +1,8 @@
+# Perm
+/idx
+/.vscode
+/docs
+
+# Temp
+/images/icons
+/projects/frames

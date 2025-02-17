@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    user-select: none;
+    background: none;
+}
+
+/* Card */
+.card {
+    background-color: var(--card-color);
+    padding: 35px 45px 35px 45px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.card .profile {
+    border-radius: 100px;
+    width: 100px;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card .info .name {
+    color: var(--default-text);
+    font-weight: 700;
+}
+
+.card .info .pronouns {
+    color: var(--neutral-text);
+    font-weight: 600;
+}
+
+/* About Me Section */
+.about {
+    background-color: var(--card-color);
+    padding: 56px 71px 56px 71px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 790px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--card-color);
+    color: var(--default-text);
+    outline: none;
+    border: none;
+    padding: 18px 30px 18px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    /* box-shadow: 0 0 10px #1a0025; */
+}
+
+.btn:hover {
+    background-color: rgba(33, 13, 65, 0.5);
+}
+
+.btn:active {
+    background-color: rgba(19, 7, 39, 0.5);
+}
+
+/* Smaller Screen Sizes */
+
+@media only screen and (max-width: 680px) {
+    .about {
+        margin: 20px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: none;
+}
+
+body {
+    background: none;
+    user-select: none;
+}

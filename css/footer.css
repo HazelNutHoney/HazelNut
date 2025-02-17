@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: none;
+}
+
+body {
+    background: none;
+    user-select: none;
+}
+
+.emoji {
+    font-family: "Noto Color Emoji", serif;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.25s all;
+}
+
+.underline:hover {
+    filter: brightness(80%);
+}
+
+.underline:active {
+    filter: brightness(50%);
+}
