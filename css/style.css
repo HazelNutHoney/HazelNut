@@ -227,9 +227,72 @@ footer {
 }
 
 /* Smaller Screen Sizes */
-@media only screen and (max-width: 1830px) {
+@media only screen and (max-width: 2349px) {
+    .modal {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 1807px) {
+    .modal {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 1566px) {
+    .modal {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1382px) {
+    .modal {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1305px) {
+    .modal h4 {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 686px) {
+    .modal h4 {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    nav li {
+        font-size: 12px;
+    }
+
+    .modal {
+        border-radius: 0;
+        height: 70%;
+    }
+
+    .modal h4 {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .modal h4 {
+        font-size: 13px !important;
+    }
+}
+
+/* @media only screen and (max-width: 2293px) {
     .modal {
         width: 55%;
+    }
+}
+
+@media only screen and (max-width: 2136px) {
+    .modal {
+        width: 65%;
     }
 }
 
@@ -239,45 +302,11 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1408px) {
-    .modal {
-        width: 75%;
-    }
-}
-
-@media only screen and (max-width: 1220px) {
-    .modal {
-        width: 85%;
-    }
-}
-
 @media only screen and (max-width: 1076px) {
     .modal h4 {
         font-size: 20px !important;
     }
-}
-
-@media only screen and (max-width: 915px) {
-    .modal h4 {
-        font-size: 18px !important;
-    }
-}
-
-@media only screen and (max-width: 723px) {
-    .modal h4 {
-        font-size: 16px !important;
-    }
-}
-
-@media only screen and (max-width: 637px) {
-    nav li {
-        font-size: 12px;
-    }
-
-    .modal h4 {
-        font-size: 14px !important;
-    }
-}
+} */
 
 /* Floater Styles */
 .floater {

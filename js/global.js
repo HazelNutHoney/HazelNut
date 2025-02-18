@@ -4,6 +4,12 @@ let section = new URLSearchParams(parent.window.location.search).get('section');
 
 // Loop through each one.
 modals.forEach(modal => {
+    document.addEventListener('click', function(event) {
+        if (!modal.contains(event.target) && !document.querySelector(".btn").contains(event.target)) {
+            showModal(modal, false); // Hide modal when you click off it.
+        }
+    });
+
     if (!modal.getAttribute('data-btn')) return; // Cancel the request if there is no data-btn attached to the modal
     modal.style.visibility = "hidden"; // Hide the modal so it cannot be clicked
     modal.style.opacity = "0"; // Hide the modal with opacity for fade
@@ -24,7 +30,7 @@ modals.forEach(modal => {
     });
 
     modal.querySelector('button.close').onclick = () => {
-        showModal(modal, false);
+        showModal(modal, false); // Hide modal on close button click.
     }
 });
 
